@@ -3,9 +3,9 @@ import React from 'react';
 const TravelerBenefits = () => {
   return (
     <section className="traveler-benefits">
-      <div className="container">
-        <h2>Only Real Travelers can guide you...</h2>
-        <p>Only people who've actually been there can help you plan better, smarter, and stress-free.</p>
+      <div className="benefits-container">
+        <h2 className="benefits-title">Only Real<br />Travelers can<br />guide you...</h2>
+        <p className="benefits-text">Only people who've actually been there<br />can help you plan better, smarter, and<br />stress-free.</p>
       </div>
     </section>
   );

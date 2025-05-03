@@ -1,41 +1,58 @@
 import React from 'react';
+import exploreImg from '../assets/images/4.jpg';
+import itineraryImg from '../assets/images/5.png';
+import chatImg from '../assets/images/6.png';
 
 const TripPlanning = () => {
   return (
     <section className="trip-planning">
       <div className="container">
-        <h1>How Do I Plan My Trip?</h1>
-        <p>Discover places, explore traveler stories, and customize your adventure — all in one place.</p>
-        
-        <button className="start-planning-btn">Start Planning Now</button>
-        
+        <div className="planning-header">
+          <h1 className="planning-title">How Do I Plan My Trip?</h1>
+          <p className="planning-subtitle">
+            Discover places, explore traveler stories, and customize your adventure — all in one place.
+          </p>
+          <button className="planning-button">Start Planning Now <span className="arrow">→</span></button>
+        </div>
+
         <div className="planning-steps">
-          <div className="step">
-            <h3>Explore Destinations</h3>
-            <ul>
-              <li>
-                <input type="checkbox" id="browse-cities" />
-                <label htmlFor="browse-cities">Browse cities, nature escapes, or offbeat spots</label>
-              </li>
-              <li>
-                <input type="checkbox" id="filter-vibe" />
-                <label htmlFor="filter-vibe">Filter by vibe: Solo, Scenic, Foodie, Cultural</label>
-              </li>
-            </ul>
+          <div className="step step-right">
+            <div className="step-image">
+              <img src={exploreImg} alt="Explore destinations" />
+            </div>
+            <div className="step-content">
+              <h3>Explore Destinations</h3>
+              <ul>
+                <li>Browse cities, nature escapes, or offbeat spots</li>
+                <li>Filter by vibe: Solo, Scenic, Foodie, Cultural</li>
+              </ul>
+            </div>
           </div>
-          
-          <div className="step">
-            <h3>Create Your Itinerary</h3>
-            <ul>
-              <li>
-                <input type="checkbox" id="add-places" checked readOnly />
-                <label htmlFor="add-places">Add must-see places, food stops, and hidden gems</label>
-              </li>
-              <li>
-                <input type="checkbox" id="customize" checked readOnly />
-                <label htmlFor="customize">Customize based on your interests & time</label>
-              </li>
-            </ul>
+
+          <div className="step step-left">
+            <div className="step-image">
+              <img src={itineraryImg} alt="Create itinerary" />
+            </div>
+            <div className="step-content">
+              <h3>Create Your Itinerary</h3>
+              <ul>
+                <li>Add must-see places, food stops, and hidden gems</li>
+                <li>Customize based on your interests & time</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="step step-right">
+            <div className="step-image">
+              <img src={chatImg} alt="Chat with experts" />
+            </div>
+            <div className="step-content">
+              <h3>Chat with Local Experts or Past Travelers</h3>
+              <ul>
+                <li>Ask real travelers or local hosts for tips</li>
+                <li>Connect securely through our platform (no number needed)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

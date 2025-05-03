@@ -1,0 +1,95 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  
+  .login-popup {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .popup-buttons button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Login button styles - customizable */
+  .login-btn {
+    background: #1e90ff; /* Changed to blue (DodgerBlue) */
+    color: rgba(255, 255, 255, 0.927); /* Changed text to white for better contrast */
+    padding: 15px 20px; /* Increased padding for larger size */
+    font-size: 16px; /* Larger font size */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Signup button styles - customizable */
+  .signup-btn {
+    background: #ff4500;
+    color: white;
+    padding: 15px 20px; /* Made same size as login button */
+    font-size: 16px; /* Consistent font size */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effects for both buttons */
+  .login-btn:hover {
+    background: #187bcd; /* Slightly darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .signup-btn:hover {
+    background: #e03e00; /* Slightly darker orange on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .dont-show-again {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  /* Customization notes: 
+     - To change the blue color: modify the #1e90ff value
+     - To adjust button size: modify padding values
+     - To change hover effects: adjust the transform/background values
+     - To modify the animation: edit the fadeIn keyframes
+  */
